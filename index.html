@@ -200,7 +200,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-11-01 17:22:32 / Modified: 17:24:12" itemprop="dateCreated datePublished" datetime="2021-11-01T17:22:32+08:00">2021-11-01</time>
+              <time title="Created: 2021-11-01 17:22:32 / Modified: 17:26:29" itemprop="dateCreated datePublished" datetime="2021-11-01T17:22:32+08:00">2021-11-01</time>
             </span>
 
           
@@ -218,109 +218,14 @@
 <blockquote>
 <p>可以尝试勾选<code>Initialize this repository with a README</code>,这样,生成之后,打开就可以看到README.md的内容了.</p>
 </blockquote>
-<h3 id="使用jelly主题优化页面"><a href="#使用jelly主题优化页面" class="headerlink" title="使用jelly主题优化页面"></a>使用jelly主题优化页面</h3><p>github提供了简单的方式更改页面</p>
-<h2 id="Hexo博客框架"><a href="#Hexo博客框架" class="headerlink" title="Hexo博客框架"></a>Hexo博客框架</h2><p><a target="_blank" rel="noopener" href="https://ryanluoxu.github.io/2017/11/24/%E7%94%A8-Hexo-%E5%92%8C-GitHub-Pages-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">用 Hexo 和 GitHub Pages 搭建博客</a></p>
-<p><code>Hexo</code> 是一个博客框架.它把本地文件里的信息生成一个网页.如果不需要放在网上给别人看,就没 <code>Github Pages</code> 什么事了.</p>
-<p>使用 <code>Hexo</code> 之前,需要先安装 <code>Node.js</code> 和 <code>Git</code>.</p>
-<p>这里注意的是,安装<code>npm</code>尽量可以使用<code>nvm</code>进行环境控制</p>
-<p>安装完上面两个环境之后.开始安装Hexo:</p>
-<h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><ul>
-<li>打开npm环境</li>
-<li>输入<code>npm install -g hexo-cli</code>or <code>npm install -g hexo</code>回车安装(我测试后一个好一点)</li>
-<li>输入:<code>hexo -v</code>查看是否安装成功(得到hexo-cli:xxx等数据)</li>
-</ul>
-<h3 id="创建本地blog"><a href="#创建本地blog" class="headerlink" title="创建本地blog"></a>创建本地blog</h3><ul>
-<li>创建一个存放blog的文件夹</li>
-<li>右击文件夹:Git Bash Here</li>
-<li><code>hexo init</code></li>
-<li><code>npm install</code>安装依赖</li>
-<li><code>hexo g</code>generate 生成网页</li>
-<li><code>hexo s</code>sever    运行网页</li>
-<li>通过<a target="_blank" rel="noopener" href="http://localhost:4000/%E8%AE%BF%E9%97%AE">http://localhost:4000/访问</a></li>
-</ul>
-<h3 id="创建新的一篇blog-并发布"><a href="#创建新的一篇blog-并发布" class="headerlink" title="创建新的一篇blog(并发布)"></a>创建新的一篇blog(并发布)</h3><ul>
-<li>继续在Git bash中输入:<code>hexo new &quot;新发布的blog的名称&quot;</code></li>
-<li>编辑在source_posts中生成的<code>新发布的blog的名称.md</code>文件</li>
-<li><code>hexo g</code>+<code>hexo s</code>,就可以在<a target="_blank" rel="noopener" href="http://localhost:4000/%E4%B8%AD%E7%9C%8B%E5%88%B0%E6%95%88%E6%9E%9C%E4%BA%86">http://localhost:4000/中看到效果了</a></li>
-</ul>
-<h3 id="将本地blog发布的github中"><a href="#将本地blog发布的github中" class="headerlink" title="将本地blog发布的github中"></a>将本地blog发布的github中</h3><ul>
-<li>找到github的repo的链接,(git clone的那种).复制备用</li>
-<li>修改Hexo的<code>_config.yml</code>文件<blockquote>
-<p>找到<code>#Deployment</code>,填入以下内容</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:  </span><br><span class="line">	  type: git  </span><br><span class="line">	  repository: https://github.com/username/username.github.io.git  </span><br><span class="line">	  branch: master</span><br></pre></td></tr></table></figure></li>
-<li>Git Bash中输入:<code>npm install hexo-deployer-git --save</code>安装<code>hexo-deployer-git</code>插件</li>
-<li><code>hexo d</code>运行插件(运行成功会有<code>INFO Deploy done: git</code>)</li>
-</ul>
-<h3 id="Next主题"><a href="#Next主题" class="headerlink" title="Next主题"></a>Next主题</h3><p>Hexo是可以去自己选很多主题的,(也可以自己开发主题),这里我就介绍一个我自己使用的主题:Next<a href="%E7%9B%AE%E5%89%8D%E4%BD%BF%E7%94%A8%E7%9A%84Next%E4%B8%BB%E9%A2%98%E7%89%88%E6%9C%AC%E5%8F%B7%E6%98%AF7.8.0">^1</a></p>
-<p>Next是国人开发,有中文文档.</p>
-<h4 id="安装Next主题"><a href="#安装Next主题" class="headerlink" title="安装Next主题"></a>安装Next主题</h4><ol>
-<li><p>Git Bash输入: <code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code>(最新版改为<code>git clone https://github.com/theme-next/hexo-theme-next.git themes/next</code>)</p>
-</li>
-<li><p>修改博客配置文件:</p>
-<p> 功能型配置:</p>
-<ul>
-<li>打开blog配置文件<code>_config.yml</code></li>
-<li>找到<code>theme:</code></li>
-<li>把Hexo默认的lanscape修改为next即<code>theme: next</code></li>
-</ul>
-<p> 其他内容配置:</p>
-<ul>
-<li>找到<code># Site</code>,添加博客名称,作者名称</li>
-<li>在<code>language</code>后面填入en或zh-Hans,选择英文或中文</li>
-<li>找到<code># URL</code>填入url,比如<code>url: https://username.github.io</code></li>
-</ul>
-</li>
-<li><p>重新generate部署:</p>
-<ul>
-<li>Git Bash输入<code>hexo g -d</code>就可以了(即先把修改的内容生成网页,再部署)</li>
-</ul>
-</li>
-</ol>
-<h4 id="Next主题配置修改"><a href="#Next主题配置修改" class="headerlink" title="Next主题配置修改"></a>Next主题配置修改</h4><h5 id="Scheme-样式修改"><a href="#Scheme-样式修改" class="headerlink" title="Scheme(样式修改)"></a>Scheme(样式修改)</h5><p>在主题的配置文件(themes\next的<code>_config.yml</code>中):<br>设置</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># Scheme Settings</span></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment"># scheme: Muse</span></span><br><span class="line"><span class="comment"># scheme: Mist</span></span><br><span class="line"><span class="comment"># scheme: Pisces</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Gemini</span></span><br></pre></td></tr></table></figure>
-<p><code>Gemini</code>就是一个有侧边栏的简洁的Next主题.</p>
-<h5 id="menu的修改"><a href="#menu的修改" class="headerlink" title="menu的修改"></a>menu的修改</h5><p>同样是<code>配置主题文件</code>,修改如下:</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="string">/schedule/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-calendar</span></span><br><span class="line">  <span class="attr">sitemap:</span> <span class="string">/sitemap.xml</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-sitemap</span></span><br><span class="line">  <span class="attr">commonweal:</span> <span class="string">/404/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-heartbeat</span></span><br></pre></td></tr></table></figure>
-<p>配置的是下面的menu<br>![Pasted image 20211101131628.png](\images\obsimages\Pasted image 20211101131628.png)</p>
-<p>这里功能并没有完善,主要参照一个Next主题配置的blog <a target="_blank" rel="noopener" href="https://ryanluoxu.github.io/2017/11/26/Hexo-%E7%9A%84-Next-%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/">^2</a></p>
-<h5 id="设置头像"><a href="#设置头像" class="headerlink" title="设置头像"></a>设置头像</h5><p>这里同样,主要参照一个Next主题配置的blog <a target="_blank" rel="noopener" href="https://ryanluoxu.github.io/2017/11/26/Hexo-%E7%9A%84-Next-%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/">^2</a>;<br>配置主题文件修改如下:</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/qie.png</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be dispalyed in circle.</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be rotated with the cursor.</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<p>其中将头像放到<code>\theme\next\source\images</code>里面</p>
-<h5 id="设置social"><a href="#设置social" class="headerlink" title="设置social"></a>设置social</h5><p>这里同样,主要参照一个Next主题配置的blog <a target="_blank" rel="noopener" href="https://ryanluoxu.github.io/2017/11/26/Hexo-%E7%9A%84-Next-%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/">^2</a>;</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">social:</span></span><br><span class="line">  <span class="comment">#GitHub: https://github.com/yourname || fab fa-github</span></span><br><span class="line">  <span class="attr">E-Mail:</span> <span class="string">mailto:username@outlook.com</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-envelope</span></span><br><span class="line">  <span class="comment">#Weibo: https://weibo.com/yourname || fab fa-weibo</span></span><br><span class="line">  <span class="comment">#Google: https://plus.google.com/yourname || fab fa-google</span></span><br><span class="line">  <span class="comment">#Twitter: https://twitter.com/yourname || fab fa-twitter</span></span><br><span class="line">  <span class="comment">#FB Page: https://www.facebook.com/yourname || fab fa-facebook</span></span><br><span class="line">  <span class="comment">#StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow</span></span><br><span class="line">  <span class="comment">#YouTube: https://youtube.com/yourname || fab fa-youtube</span></span><br><span class="line">  <span class="comment">#Instagram: https://instagram.com/yourname || fab fa-instagram</span></span><br><span class="line">  <span class="comment">#Skype: skype:yourname?call|chat || fab fa-skype</span></span><br></pre></td></tr></table></figure>
-<p>这里我只是添加了一个email.其他的都没添加</p>
-<h5 id="修改字体大小"><a href="#修改字体大小" class="headerlink" title="修改字体大小"></a>修改字体大小</h5><p>当前使用的Next主题版本字体大小的修改同以前<a target="_blank" rel="noopener" href="https://ryanluoxu.github.io/2017/11/26/Hexo-%E7%9A%84-Next-%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/">^2</a>并不一致.</p>
-<p>以前可以直接使用主题配置文件进行配置,现在我们需要使用<code>\themes\next\source\css\_variables\base.styl</code>中直接修改.</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// Font size</span><br><span class="line">$font-size-base           = (hexo-config(&#x27;font.enable&#x27;) and hexo-config(&#x27;font.global.size&#x27;) is a &#x27;unit&#x27;) ? unit(hexo-config(&#x27;font.global.size&#x27;), em) : 1em;</span><br><span class="line">$font-size-smallest       = .75em;</span><br><span class="line">$font-size-smaller        = .8125em;</span><br><span class="line">$font-size-small          = .875em;</span><br><span class="line">$font-size-medium         = 1em;</span><br><span class="line">$font-size-large          = 1em;</span><br><span class="line">$font-size-larger         = 1.25em;</span><br><span class="line">$font-size-largest        = 1.5em;</span><br></pre></td></tr></table></figure>
-
-<p>这里面是不同像素下的字体大小,可以根据自己需要,调整;</p>
-<h5 id="Next主题切换Scheme之后-上传Github不生效"><a href="#Next主题切换Scheme之后-上传Github不生效" class="headerlink" title="Next主题切换Scheme之后,上传Github不生效"></a>Next主题切换Scheme之后,上传Github不生效</h5><p>多运行几次下面的指令:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line"></span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>并且别忘了清除缓存</p>
-<h3 id="首页设置read-more"><a href="#首页设置read-more" class="headerlink" title="首页设置read more"></a>首页设置read more</h3><blockquote>
-<p>这个部分比较坑,目前必须要在文章中插入<code>&lt;!-- more--&gt;</code>,才可以在页面中显示</p>
-</blockquote>
-<h3 id="没有介绍的功能"><a href="#没有介绍的功能" class="headerlink" title="没有介绍的功能"></a>没有介绍的功能</h3><ol>
-<li>目录的生成</li>
-<li>标签的使用</li>
-<li>评论系统</li>
-<li>底部的链接</li>
-<li>etc^……</li>
-</ol>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol>
-<li><a target="_blank" rel="noopener" href="https://ryanluoxu.github.io/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">博客搭建</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5">hexo-theme-next wiki设置侧边栏社交链接</a></li>
-<li><a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/theme-settings.html#tags-page">Hexo Next 主题配置</a></li>
-<li><a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/faqs.html">如何设置「阅读全文」?</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/iissnan/theme-next-docs/issues/270">Next不同版本的文档地址</a></li>
-<li><a target="_blank" rel="noopener" href="https://hexo.io/api/">Hexo api doc</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/dpdpdppp/article/details/102387532">具体版hexo(Next主题)修改文字大小</a></li>
-</ol>
-<p>#Hexo #Blog #Next主题 #Github</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/01/GithubPage%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%92%8C%E7%BE%8E%E5%8C%96/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
